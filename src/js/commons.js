@@ -1,4 +1,4 @@
-import '../assets/css/global.scss'
+import '../assets/css/_base.scss'
 
 console.log('添加indexOf')
 

@@ -114,15 +114,23 @@ module.exports = {
     },
     {
       test: /\.(gif|png|jpe?g|svg)$/i,
-      use: [{
-        loader: 'url-loader',
-        options: {
-          limit: 8192,
-          name: '[name].[ext]',
-          fallback: 'file-loader', //超过了限制大小调用回调函数
-          outputPath: 'images' //图片存储的地址
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            name: '[name].[ext]',
+            fallback: 'file-loader', //超过了限制大小调用回调函数
+            outputPath: 'images/' //图片存储的地址
+          }
         }
-      }]
+      ]
+    },
+    {
+      test: /\.(htm|html)$/i,
+      use: [
+        'html-withimg-loader'
+      ]
     }
     ]
   },

@@ -1,4 +1,4 @@
-import '../assets/css/global.scss'
+import '../assets/css/_base.scss'
 import '../assets/css/index.scss'
 
 function one (n) {

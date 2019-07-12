@@ -1,3 +1,4 @@
+const path = require('path')
 const merge = require('webpack-merge')
 const common = require('./webpack.config.js')
 // js压缩
@@ -12,26 +13,26 @@ module.exports = merge(common, {
   module: {
     rules: [{
       test: /\.(sa|sc|c)ss$/,
-      use: [
-        {
-          loader: MiniCssExtractPlugin.loader
-        },
-        'css-loader',
-        {
-          loader: 'postcss-loader',
-          options: {
-            ident: 'postcss',
-            plugins: (loader) => [
-              require('postcss-import')({ root: loader.resourcePath }),
-              require('postcss-cssnext')(),
-              require('cssnano')()
-            ]
-          }
-        },
-        'sass-loader'
+      use: [{
+        loader: MiniCssExtractPlugin.loader
+      },
+      'css-loader',
+      {
+        loader: 'postcss-loader',
+        options: {
+          ident: 'postcss',
+          plugins: (loader) => [
+            require('postcss-import')({
+              root: loader.resourcePath
+            }),
+            require('postcss-cssnext')(),
+            require('cssnano')()
+          ]
+        }
+      },
+      'sass-loader'
       ]
-    }
-    ]
+    }]
   },
   plugins: [],
   // optimization.splitChunks代码引用去重分离，把公共引用代码抽离到再另一个output.js中
