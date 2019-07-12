@@ -11,66 +11,24 @@ module.exports = merge(common, {
   devtool: 'source-map',
   module: {
     rules: [{
-      test: /\.css/,
-      use: [{
-        loader: 'style-loader',
-        options: {
-          sourceMap: true
-        }
-      },
-      {
-        loader: 'css-loader',
-        options: {
-          sourceMap: true
-        }
-      },
-      {
-        loader: 'postcss-loader',
-        options: {
-          ident: 'postcss',
-          plugins: [
-            require('autoprefixer')({
-              overrideBrowserslist: ['> 0.15% in CN'] // 这个地方真是坑啊！！
-            })
-          ]
-        }
-      },
-      {
-        loader: 'sass-loader',
-        options: {
-          sourceMap: true
-        }
-      }
-      ]
-    },
-    {
       test: /\.(sa|sc|c)ss$/,
-      use: [{
-        loader: MiniCssExtractPlugin.loader
-      },
-      {
-        loader: 'css-loader',
-        options: {
-          sourceMap: true
-        }
-      },
-      {
-        loader: 'postcss-loader',
-        options: {
-          ident: 'postcss',
-          plugins: [
-            require('autoprefixer')({
-              overrideBrowserslist: ['> 0.15% in CN'] // 这个地方真是坑啊！！
-            })
-          ]
-        }
-      },
-      {
-        loader: 'sass-loader',
-        options: {
-          sourceMap: true
-        }
-      }
+      use: [
+        {
+          loader: MiniCssExtractPlugin.loader
+        },
+        'css-loader',
+        {
+          loader: 'postcss-loader',
+          options: {
+            ident: 'postcss',
+            plugins: (loader) => [
+              require('postcss-import')({ root: loader.resourcePath }),
+              require('postcss-cssnext')(),
+              require('cssnano')()
+            ]
+          }
+        },
+        'sass-loader'
       ]
     }
     ]

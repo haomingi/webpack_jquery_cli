@@ -1,13 +1,8 @@
-module.exports = {
-  // 解析器
-  // sugarss解析基于缩进的css写法
-  // parser: 'sugarss',
+module.exports = ({ file, options, env }) => ({
+  // parser: file.extname === '.sss' ? 'sugarss' : false,
   plugins: {
-    // 解决path路径问题，得在第一个使用
-    'postcss-import': {},
-    // 对最新css语法兼容，包含autoprefixer
-    'postcss-preset-env': {},
-    // 对css压缩
-    'cssnano': {}
+    'postcss-import': { root: file.dirname },
+    'postcss-cssnext': options.cssnext ? options.cssnext : false
+    // 'cssnano': env === 'production' ? options.cssnano : false
   }
-}
+})

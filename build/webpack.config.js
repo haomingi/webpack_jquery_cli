@@ -97,17 +97,18 @@ module.exports = {
       use: [
         'style-loader',
         'css-loader',
-        {
-          loader: 'postcss-loader',
-          options: {
-            ident: 'postcss',
-            plugins: [
-              require('autoprefixer')({
-                // overrideBrowserslist: ['> 0.15% in CN'] // 这个地方真是坑啊！！本地环境时候 不运行这个
-              })
-            ]
-          }
-        },
+        // {
+        //   loader: 'postcss-loader',
+        //   options: {
+        //     ident: 'postcss',
+        //     plugins: (loader) => [
+        //       require('postcss-import')({ root: loader.resourcePath }),
+        //       require('postcss-cssnext')(),
+        //       require('autoprefixer')(),
+        //       require('cssnano')()
+        //     ]
+        //   }
+        // },
         'sass-loader'
       ]
     },
