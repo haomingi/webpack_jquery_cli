@@ -11,6 +11,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-touch-fullscreen" content="yes" />
     <meta name="format-detection" content="telephone=no, email=no" />
+    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <script src="https://at.alicdn.com/t/font_1290974_g8afzgrnvm.js"></script>
     <title>英文站</title>
     <style type="text/css">
@@ -26,23 +27,66 @@
 
   <body>
     <!-- 测试了 -->
-    <header class="index-header bgWhite">
+    <header class="mb-header bgWhite">
       <img class="logo left" src="../assets/images/logo_2x.png" />
-      <svg class="mb-icon right" aria-hidden="true">
+      <svg class="mb-icon right index-contents" aria-hidden="true">
         <use xlink:href="#iconzu10"></use>
       </svg>
       <svg class="mb-icon right search" aria-hidden="true">
         <use xlink:href="#iconsousuo"></use>
       </svg>
     </header>
-    <div class="index-main">
-      <div class="index-main-search bgWhite">
-        <input class="index-main-search-input left" placeholder="Please Enter CAS No., Product Name or Formula" />
-        <svg class="mb-icon right" aria-hidden="true">
+    <div class="mb-main">
+      <div class="mb-main-search bgWhite">
+        <input class="mb-main-search-input left" placeholder="Please Enter CAS No., Product Name or Formula" />
+        <svg class="mb-icon right mb-main-search-button" aria-hidden="true">
           <use xlink:href="#iconsousuo"></use>
         </svg>
       </div>
-      <div class="index-main-swiper"></div>
+      <div class="mb-main-swiper">
+        <!-- <div id="full_feature" class="swipslider swiper" style="color: red">
+          <ul class="sw-slides" style="transition-duration: 500ms; transition-timing-function: ease-out; transition-property: all; transform: translateX(-2560px);">
+            <li class="sw-slide">
+            <img src="../assets/images/swiper.png" alt="Redhead girl">
+            </li>
+            <li class="sw-slide">
+            <img src="../assets/images/swiper.png" alt="Summer beach concept">
+            </li>
+            <li class="sw-slide">
+            <img src="../assets/images/swiper.png" alt="Lang from Yie Ar Kung Fu">
+            </li>
+          </ul>
+          <span class="sw-next-prev sw-next"></span>
+          <span class="sw-next-prev sw-prev"></span>
+        </div> -->
+        <div class="swiper-container">
+          <div class="swiper">
+            <div class="swiper-item">
+              <a href="javascript:;">
+                <img class="img" src="../assets/images/swiper.png" >
+                <!-- <p class="desc">11</p> -->
+              </a>
+            </div>
+            <div class="swiper-item">
+              <a href="javascript:;">
+                <img class="img" src="../assets/images/swiper.png" >
+                <!-- <p class="desc">11</p> -->
+              </a>
+            </div>
+            <div class="swiper-item">
+              <a href="javascript:;">
+                <img class="img" src="../assets/images/swiper.png" >
+                <!-- <p class="desc">11</p> -->
+              </a>
+            </div>
+          </div>
+          <div class="swiper-indicator">
+            <i class="active"></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+      </div>
       <div class="index-main-content">
         <div class="mb-title">
           <h2 class="inline mb-title-theme">Hot Compound</h2>
@@ -151,5 +195,8 @@
         <p>ICP Shanghai 14014220</p>
       </div>
     </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
   </body>
 </html>
