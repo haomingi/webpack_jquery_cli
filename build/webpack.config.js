@@ -2,15 +2,12 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const {
-  CleanWebpackPlugin
-} = require('clean-webpack-plugin')
 
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const PreloadWebpackPlugin = require('preload-webpack-plugin')
+// const PreloadWebpackPlugin = require('preload-webpack-plugin')
 const CssUrlRelativePlugin = require('css-url-relative-plugin')
 
-var postcss = require('postcss')
+// var postcss = require('postcss')
 var aliasConfig = require('./aliasConfig')
 
 const config = require('./config')
@@ -19,6 +16,8 @@ let Entries = {}
 let HTMLPlugins = []
 // 获取cmd命令
 const IS_DEV = process.env.NODE_ENV === 'dev'
+// 代理地址 内容可单独提出去
+var target = 'http://dev-m.molbase.com/'
 
 // 生成多页面的集合
 config.HTMLDirs.forEach(page => {
@@ -46,7 +45,7 @@ console.log(Entries)
 module.exports = {
   entry: Entries,
   output: {
-    filename: IS_DEV ? 'js/[name].[hash:8].js' : 'js/[name].[chunkhash:8].js',
+    filename: IS_DEV ? 'js/[name].[hash:8].js' : 'js/[name].js', // [chunkhash:8].
     path: path.resolve(__dirname, '../dist'),
     publicPath: IS_DEV ? '/' : './'
   },
@@ -54,12 +53,10 @@ module.exports = {
     alias: aliasConfig
   },
   plugins: [
-    // 清除
-    new CleanWebpackPlugin(),
     ...HTMLPlugins,
     new MiniCssExtractPlugin({
-      filename: !IS_DEV ? 'css/[name].[contenthash:8].css' : '[name].css',
-      chunkFilename: !IS_DEV ? 'css/[name].[contenthash:8].css' : '[name].css',
+      filename: !IS_DEV ? 'css/[name].css' : '[name].css', // [contenthash:8]
+      chunkFilename: !IS_DEV ? 'css/[name].css' : '[name].css', // [contenthash:8]
       allChunks: true
     }),
     // 自动加载模块，当在项目中遇见$、jQuery、会自动加载JQUERY模块
@@ -69,8 +66,8 @@ module.exports = {
     // }),
     // 将单个文件或整个目录复制到构建目录
     new CopyWebpackPlugin([{
-      from: './src/public',
-      to: 'public'
+      from: './src/static',
+      to: 'static'
     }]),
     // 预加载
     // new PreloadWebpackPlugin({
@@ -144,8 +141,18 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, '../src')
+    contentBase: path.join(__dirname, '../src'),
+    proxy: {
+      '/moldata': {
+        target: target,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/moldata': '/moldata'
+        }
+      }
+    }
   },
+  devtool: 'cheap-module-eval-source-map', //开发环境js代码不混淆 inline-source-map
   optimization: {
     splitChunks: {
       chunks: 'async',

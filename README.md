@@ -1,5 +1,14 @@
 # webpack_jquery_cli
-基于：webpack+bootstarp+jquery+scss做个一个架子
-yarn add
+
+> webpack + bootstarp + jquery + scss
+
+> flexible是最后引入的，只改了部分样式，见谅。使用的cssrem进行px -> rem。
+
+``` bash
+
+yarn
+
 yarn run dev 开发
+
 yarn run build 打包
+```

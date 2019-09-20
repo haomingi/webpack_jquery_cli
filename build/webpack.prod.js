@@ -7,9 +7,13 @@ const TerserJSPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin')
+
 module.exports = merge(common, {
   mode: 'production',
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map', // source-map
   module: {
     rules: [{
       test: /\.(sa|sc|c)ss$/,
@@ -34,7 +38,10 @@ module.exports = merge(common, {
       ]
     }]
   },
-  plugins: [],
+  plugins: [
+    // 清除
+    new CleanWebpackPlugin()
+  ],
   // optimization.splitChunks代码引用去重分离，把公共引用代码抽离到再另一个output.js中
   // 感觉optimization.splitChunks是用在多页面代码去重分离的
   // 单页面所有第三方库已经用了dll配合manifest保证只引入一次了，不用optimization.splitChunks了

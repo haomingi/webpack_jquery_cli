@@ -12,6 +12,8 @@
     <meta name="apple-touch-fullscreen" content="yes" />
     <meta name="format-detection" content="telephone=no, email=no" />
     <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <meta name="flexible" content="initial-dpr=2" />
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
     <script src="https://at.alicdn.com/t/font_1290974_g8afzgrnvm.js"></script>
     <title>英文站</title>
     <style type="text/css">
@@ -26,176 +28,544 @@
   </head>
 
   <body>
-    <!-- 测试了 -->
-    <header class="mb-header bgWhite">
-      <img class="logo left" src="../assets/images/logo_2x.png" />
-      <svg class="mb-icon right index-contents" aria-hidden="true">
-        <use xlink:href="#iconzu10"></use>
-      </svg>
-      <svg class="mb-icon right search" aria-hidden="true">
-        <use xlink:href="#iconsousuo"></use>
-      </svg>
-    </header>
-    <div class="mb-main">
-      <div class="mb-main-search bgWhite">
-        <input class="mb-main-search-input left" placeholder="Please Enter CAS No., Product Name or Formula" />
-        <svg class="mb-icon right mb-main-search-button" aria-hidden="true">
-          <use xlink:href="#iconsousuo"></use>
-        </svg>
-      </div>
-      <div class="mb-main-swiper">
-        <!-- <div id="full_feature" class="swipslider swiper" style="color: red">
-          <ul class="sw-slides" style="transition-duration: 500ms; transition-timing-function: ease-out; transition-property: all; transform: translateX(-2560px);">
-            <li class="sw-slide">
-            <img src="../assets/images/swiper.png" alt="Redhead girl">
-            </li>
-            <li class="sw-slide">
-            <img src="../assets/images/swiper.png" alt="Summer beach concept">
-            </li>
-            <li class="sw-slide">
-            <img src="../assets/images/swiper.png" alt="Lang from Yie Ar Kung Fu">
-            </li>
-          </ul>
-          <span class="sw-next-prev sw-next"></span>
-          <span class="sw-next-prev sw-prev"></span>
-        </div> -->
-        <div class="swiper-container">
-          <div class="swiper">
-            <div class="swiper-item">
-              <a href="javascript:;">
-                <img class="img" src="../assets/images/swiper.png" >
-                <!-- <p class="desc">11</p> -->
-              </a>
+    <div class="mb-base">
+      <!-- 测试了 -->
+      <header class="mb-header bgWhite">
+        <a><img class="logo left" src="../assets/images/logo_3x.png" /></a>
+        <div class="mb-icon right index-contents">
+          <!-- bodymovinanim -->
+          <svg class="mb-icon right" aria-hidden="true">
+            <use xlink:href="#iconzu10"></use>
+          </svg>
+          <svg class="mb-icon right dn" aria-hidden="true">
+            <use xlink:href="#iconzu11"></use>
+          </svg>
+        </div>
+        <a>
+          <svg class="mb-icon right search" aria-hidden="true">
+            <use xlink:href="#iconsousuo"></use>
+          </svg>
+        </a>
+      </header>
+      <div class="mb-main mb-class">
+        <!-- search -->
+        <div class="mb-main-search bgWhite border-radius5" data-url="https://www.baidu.com">
+          <input
+            class="mb-main-search-input left"
+            placeholder="Please Enter CAS No., Product Name or Formula"
+            disabled
+          />
+          <svg class="mb-icon right mb-main-search-button" aria-hidden="true">
+            <use xlink:href="#iconsousuo"></use>
+          </svg>
+        </div>
+        <!-- swiper -->
+        <div class="mb-main-swiper mb-class border-radius5">
+          <div class="swiper-container">
+            <div class="swiper">
+              <div class="swiper-item border-radius5">
+                <a href="javascript:;">
+                  <img class="img" src="../assets/images/swiper.png" />
+                  <!-- <p class="desc">11</p> -->
+                </a>
+              </div>
+              <div class="swiper-item border-radius5">
+                <a href="javascript:;">
+                  <img class="img" src="../assets/images/swiper.png" />
+                  <!-- <p class="desc">11</p> -->
+                </a>
+              </div>
+              <div class="swiper-item border-radius5">
+                <a href="javascript:;">
+                  <img class="img" src="../assets/images/swiper.png" />
+                  <!-- <p class="desc">11</p> -->
+                </a>
+              </div>
             </div>
-            <div class="swiper-item">
-              <a href="javascript:;">
-                <img class="img" src="../assets/images/swiper.png" >
-                <!-- <p class="desc">11</p> -->
-              </a>
-            </div>
-            <div class="swiper-item">
-              <a href="javascript:;">
-                <img class="img" src="../assets/images/swiper.png" >
-                <!-- <p class="desc">11</p> -->
-              </a>
+            <div class="swiper-indicator">
+              <i class="active"></i>
+              <i></i>
+              <i></i>
             </div>
           </div>
-          <div class="swiper-indicator">
-            <i class="active"></i>
-            <i></i>
-            <i></i>
+        </div>
+        <div class="index-main-content mb-class">
+          <div class="mb-title">
+            <h3 class="inline mb-title-theme">Hot Compound</h3>
+            <span class="right mb-title-more mb-blue">
+              <svg class="mb-icon mb-icon-small" aria-hidden="true">
+                <use xlink:href="#iconjianchagengxin"></use>
+              </svg>
+              &nbsp;More
+            </span>
           </div>
-        </div>
-      </div>
-      <div class="index-main-content">
-        <div class="mb-title">
-          <h2 class="inline mb-title-theme">Hot Compound</h2>
-          <span class="right mb-title-more index-blue">
-            <svg class="mb-icon mb-icon-small" aria-hidden="true">
-              <use xlink:href="#iconjianchagengxin"></use>
-            </svg>
-            &nbsp;More
-          </span>
-        </div>
-        <div class="mb-list bgWhite info-lead">
-          <dl class="clearfix">
-            <dt><img src="../assets/images/row.png" alt=""></dt>
-            <dd>
-              <h3 class="mb-title-theme">Trimethylolpropane trimethacrylate</h3>
-              <p class="index-blue">
-                CAS No. 3290-92-4
-              </p>
-              <span>Formula: C18H26O6</span>
-            </dd>
-          </dl>
-          <dl class="clearfix">
-            <dt><img src="../assets/images/row.png" alt=""></dt>
-            <dd>
-              <h3 class="mb-title-theme">Trimethylolpropane trimethacrylate</h3>
-              <p class="index-blue">
-                CAS No. 3290-92-4
-              </p>
-              <span>Formula: C18H26O6</span>
-            </dd>
-          </dl>
-          <dl class="clearfix">
-            <dt><img src="../assets/images/row.png" alt=""></dt>
-            <dd>
-              <h3 class="mb-title-theme">Trimethylolpropane trimethacrylate</h3>
-              <p class="index-blue">
-                CAS No. 3290-92-4
-              </p>
-              <span>Formula: C18H26O6</span>
-            </dd>
-          </dl>
-          <dl class="clearfix">
-              <dt><img src="../assets/images/row.png" alt=""></dt>
-              <dd>
-                <h3 class="mb-title-theme">Trimethylolpropane trimethacrylate</h3>
-                <p class="index-blue">
+          <div class="mb-list mb-class bgWhite info-lead border-radius5">
+            <dl class="clearfix">
+              <dt><img src="../assets/images/row.png" alt="" /></dt>
+              <dd class="font12">
+                <h5 class="mb-title-theme">Trimethylolpropane trimethacrylate</h5>
+                <p class="mb-blue">
                   CAS No. 3290-92-4
                 </p>
                 <span>Formula: C18H26O6</span>
               </dd>
             </dl>
-          <ul class="mb-list-item">
-            <li>Furoic acid</li>
-            <li>acid</li>
-            <li>111 acid</li>
-            <li>33 acid</li>
-            <li>Fur4oic acid</li>
-            <li>Fur55oic acid</li>
-            <li>N-[4-acetyl-2-(2,4-difluorophenoxy)hhhhhhhhhhhhhhhhhhhhhhh</li>
-          </ul>
+            <dl class="clearfix">
+              <dt><img src="../assets/images/row.png" alt="" /></dt>
+              <dd class="font12">
+                <h5 class="mb-title-theme">Trimethylolpropane trimethacrylate</h5>
+                <p class="mb-blue">
+                  CAS No. 3290-92-4
+                </p>
+                <span>Formula: C18H26O6</span>
+              </dd>
+            </dl>
+            <dl class="clearfix">
+              <dt><img src="../assets/images/row.png" alt="" /></dt>
+              <dd class="font12">
+                <h5 class="mb-title-theme">Trimethylolpropane trimethacrylate</h5>
+                <p class="mb-blue">
+                  CAS No. 3290-92-4
+                </p>
+                <span>Formula: C18H26O6</span>
+              </dd>
+            </dl>
+            <ul class="mb-list-item mb-class">
+              <li>Furoic acid</li>
+              <li>acid</li>
+              <li>111 acid</li>
+              <li>33 acid</li>
+              <li>Fur4oic acid</li>
+              <li>Fur55oic acid</li>
+              <li>N-[4-acetyl-2-(2,4-difluorophenoxy)hhhhhhhhhhhhhhhhhhhhhhh</li>
+            </ul>
+          </div>
+        </div>
+        <div class="index-main-about mb-class">
+          <div class="mb-title">
+            <h3 class="inline mb-title-theme">About Us</h3>
+          </div>
+          <div class="bgWhite border-radius5">
+            <div class="index-main-about-content">
+              <a>
+                <h4 class="mb-blue">
+                  The World's Leading Chemical </br>E-commerce Platform
+                </h4>
+                <p class="index-margin-top">
+                  MOLBASE, found in Shanghai in 2013, is a leading data-driven
+                  integrated platform in chemical e-commerce industry. It is the
+                  largest chemical e-commerce platform in China in terms of GMV in
+                  2017 and 2018, according to Frost & Sullivan.
+                </p>
+                <p class="mb-blue index-margin-top">Learn More ></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mb-class bgWhite border-radius5">
+          <div class="list-menu">
+            <!-- 一行的内容 -->
+            <div class="list-menu-head">
+              <div class="list-menu-label no-flex">
+                <!-- <slot name="label">{{ label }}</slot> -->
+                <svg class="mb-icon" aria-hidden="true">
+                  <use xlink:href="#iconzu18"></use>
+                </svg>
+              </div>
+              <div class="list-menu-main align-items">
+                <!-- <slot name="main">{{ main }}</slot> -->
+                <span>ABOUT US</span>
+              </div>
+              <div class="list-menu-side no-flex">
+                <!-- <slot name="side">{{ side }}</slot> -->
+                <!-- <span class="catalog-mune-body"
+                  >Total <span class="mb-blue">3</span> Documents</span
+                > -->
+                <svg class="mb-icon right mb-icon-next" aria-hidden="true">
+                  <use xlink:href="#iconzu15"></use>
+                </svg>
+              </div>
+            </div>
+            <!-- 下方主体内容 -->
+          </div>
+          <div class="list-menu">
+            <!-- 一行的内容 -->
+            <div class="list-menu-head">
+              <div class="list-menu-label no-flex">
+                <!-- <slot name="label">{{ label }}</slot> -->
+                <svg class="mb-icon" aria-hidden="true">
+                  <use xlink:href="#iconzu9"></use>
+                </svg>
+              </div>
+              <div class="list-menu-main align-items">
+                <!-- <slot name="main">{{ main }}</slot> -->
+                <span>TERMS & CONDITIONS</span>
+              </div>
+              <div class="list-menu-side no-flex">
+                <!-- <slot name="side">{{ side }}</slot> -->
+                <!-- <span class="catalog-mune-body"
+                  >Total <span class="mb-blue">3</span> Documents</span
+                > -->
+                <svg class="mb-icon right mb-icon-next" aria-hidden="true">
+                  <use xlink:href="#iconzu15"></use>
+                </svg>
+              </div>
+            </div>
+            <!-- 下方主体内容 -->
+          </div>
+          <div class="list-menu">
+            <!-- 一行的内容 -->
+            <div class="list-menu-head">
+              <div class="list-menu-label no-flex">
+                <!-- <slot name="label">{{ label }}</slot> -->
+                <svg class="mb-icon" aria-hidden="true">
+                  <use xlink:href="#iconzu8"></use>
+                </svg>
+              </div>
+              <div class="list-menu-main align-items">
+                <!-- <slot name="main">{{ main }}</slot> -->
+                <span>PRIVACY POLICY</span>
+              </div>
+              <div class="list-menu-side no-flex">
+                <!-- <slot name="side">{{ side }}</slot> -->
+                <!-- <span class="catalog-mune-body"
+                  >Total <span class="mb-blue">3</span> Documents</span
+                > -->
+                <svg class="mb-icon right mb-icon-next" aria-hidden="true">
+                  <use xlink:href="#iconzu15"></use>
+                </svg>
+              </div>
+            </div>
+            <!-- 下方主体内容 -->
+          </div>
+          <div class="list-menu">
+            <!-- 一行的内容 -->
+            <div class="list-menu-head">
+              <div class="list-menu-label no-flex">
+                <!-- <slot name="label">{{ label }}</slot> -->
+                <svg class="mb-icon" aria-hidden="true">
+                  <use xlink:href="#iconzu7"></use>
+                </svg>
+              </div>
+              <div class="list-menu-main align-items">
+                <!-- <slot name="main">{{ main }}</slot> -->
+                <span>CONTACT US</span>
+              </div>
+              <div class="list-menu-side no-flex">
+                <!-- <slot name="side">{{ side }}</slot> -->
+                <!-- <span class="catalog-mune-body"
+                  >Total <span class="mb-blue">3</span> Documents</span
+                > -->
+                <svg class="mb-icon right mb-icon-next" aria-hidden="true">
+                  <use xlink:href="#iconzu15"></use>
+                </svg>
+              </div>
+            </div>
+            <!-- 下方主体内容 -->
+          </div>
+        </div>
+        <div class="mb-footer mb-class font12">
+          <p>Copyright © 2015 MOLBASE All Rights Reserved.</p>
+          <p>ICP Shanghai 14014220</p>
         </div>
       </div>
-      <div class="index-main-about">
-        <div class="mb-title">
-          <h2 class="inline mb-title-theme">About Us</h1>
+      <!-- 顶部目录 -->
+      <div class="mb-navigate bgWhite view-leave">
+        <div class="mb-navigate-main">
+          <!-- 1 -->
+          <div class="list-menu">
+            <!-- 一行的内容 -->
+            <div class="list-menu-head">
+              <div class="list-menu-label no-flex">
+                <!-- <slot name="label">{{ label }}</slot> -->
+                <svg class="mb-icon" aria-hidden="true">
+                  <use xlink:href="#iconzu1"></use>
+                </svg>
+              </div>
+              <div class="list-menu-main">
+                <!-- <slot name="main">{{ main }}</slot> -->
+                <h5>HOME</h5>
+              </div>
+              <div class="list-menu-side no-flex">
+                <!-- <slot name="side">{{ side }}</slot> -->
+                <!-- <span class="catalog-mune-body"
+                  >Total <span class="mb-blue">3</span> Documents</span
+                > -->
+                <!-- <svg class="mb-icon right mb-icon-next" aria-hidden="true">
+                  <use xlink:href="#iconzu16"></use>
+                </svg> -->
+              </div>
+            </div>
+            <!-- 下方主体内容 -->
+          </div>
+          <!-- 2 -->
+          <div class="list-menu">
+            <!-- 一行的内容 -->
+            <div class="list-menu-head">
+              <div class="list-menu-label no-flex">
+                <!-- <slot name="label">{{ label }}</slot> -->
+                <svg class="mb-icon" aria-hidden="true">
+                  <use xlink:href="#iconzu2"></use>
+                </svg>
+              </div>
+              <div class="list-menu-main">
+                <!-- <slot name="main">{{ main }}</slot> -->
+                <h5>ABOUT US</h5>
+              </div>
+              <div class="list-menu-side no-flex">
+                <!-- <slot name="side">{{ side }}</slot> -->
+                <!-- <span class="catalog-mune-body"
+                  >Total <span class="mb-blue">3</span> Documents</span
+                > -->
+                <!-- <svg class="mb-icon right mb-icon-next" aria-hidden="true">
+                  <use xlink:href="#iconzu16"></use>
+                </svg> -->
+              </div>
+            </div>
+            <!-- 下方主体内容 -->
+            <div class="list-menu-body list-menu-secondary db">
+              <div class="list-menu">
+                <!-- 一行的内容 -->
+                <div class="list-menu-head">
+                  <div class="list-menu-label no-flex">
+                    <div class="mb-icon-null"></div>
+                  </div>
+                  <div class="list-menu-main font14">
+                    About MOLBASE
+                  </div>
+                  <div class="list-menu-side no-flex"></div>
+                </div>
+              </div>
+              <div class="list-menu">
+                <!-- 一行的内容 -->
+                <div class="list-menu-head">
+                  <div class="list-menu-label no-flex">
+                    <div class="mb-icon-null"></div>
+                  </div>
+                  <div class="list-menu-main font14">
+                    Explore MOLBASE
+                  </div>
+                  <div class="list-menu-side no-flex"></div>
+                </div>
+              </div>
+              <div class="list-menu">
+                <!-- 一行的内容 -->
+                <div class="list-menu-head">
+                  <div class="list-menu-label no-flex">
+                    <div class="mb-icon-null"></div>
+                  </div>
+                  <div class="list-menu-main font14">
+                    PRODUCTS & SERVICES
+                  </div>
+                  <div class="list-menu-side no-flex">
+                    <svg class="mb-icon mb-navigate-icon" aria-hidden="true">
+                      <use xlink:href="#iconzu17"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="list-menu-body list-menu-secondary list-menu-thirdlevel">
+                  <div class="list-menu">
+                    <!-- 一行的内容 -->
+                    <div class="list-menu-head">
+                      <div class="list-menu-label no-flex">
+                        <div class="mb-icon-null"></div>
+                      </div>
+                      <div class="list-menu-main">
+                        <img src="../assets/images/star.png" >
+                        About MOLBASE
+                      </div>
+                      <div class="list-menu-side no-flex"></div>
+                    </div>
+                  </div>
+                  <div class="list-menu">
+                    <!-- 一行的内容 -->
+                    <div class="list-menu-head">
+                      <div class="list-menu-label no-flex">
+                        <div class="mb-icon-null"></div>
+                      </div>
+                      <div class="list-menu-main">
+                        <img src="../assets/images/star.png" >
+                        About MOLBASE
+                      </div>
+                      <div class="list-menu-side no-flex"></div>
+                    </div>
+                  </div>
+                  <div class="list-menu">
+                    <!-- 一行的内容 -->
+                    <div class="list-menu-head">
+                      <div class="list-menu-label no-flex">
+                        <div class="mb-icon-null"></div>
+                      </div>
+                      <div class="list-menu-main">
+                        <img src="../assets/images/star.png" >
+                        About MOLBASE
+                      </div>
+                      <div class="list-menu-side no-flex"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="list-menu">
+            <!-- 一行的内容 -->
+            <div class="list-menu-head">
+              <div class="list-menu-label no-flex">
+                <!-- <slot name="label">{{ label }}</slot> -->
+                <svg class="mb-icon" aria-hidden="true">
+                  <use xlink:href="#iconzu6"></use>
+                </svg>
+              </div>
+              <div class="list-menu-main">
+                <!-- <slot name="main">{{ main }}</slot> -->
+                <h5>ENCYCLOPEDIA</h5>
+              </div>
+              <div class="list-menu-side no-flex">
+                <!-- <slot name="side">{{ side }}</slot> -->
+                <!-- <span class="catalog-mune-body"
+                  >Total <span class="mb-blue">3</span> Documents</span
+                > -->
+                <!-- <svg class="mb-icon right mb-icon-next" aria-hidden="true">
+                  <use xlink:href="#iconzu16"></use>
+                </svg> -->
+              </div>
+            </div>
+            <!-- 下方主体内容 -->
+          </div>
+          <!-- 4 -->
+          <div class="list-menu">
+            <!-- 一行的内容 -->
+            <div class="list-menu-head">
+              <div class="list-menu-label no-flex">
+                <!-- <slot name="label">{{ label }}</slot> -->
+                <svg class="mb-icon" aria-hidden="true">
+                  <use xlink:href="#iconzu5"></use>
+                </svg>
+              </div>
+              <div class="list-menu-main">
+                <!-- <slot name="main">{{ main }}</slot> -->
+                <h5>PRODUCTS</h5>
+              </div>
+              <div class="list-menu-side no-flex">
+                <!-- <slot name="side">{{ side }}</slot> -->
+                <!-- <span class="catalog-mune-body"
+                  >Total <span class="mb-blue">3</span> Documents</span
+                > -->
+                <!-- <svg class="mb-icon right mb-icon-next" aria-hidden="true">
+                  <use xlink:href="#iconzu16"></use>
+                </svg> -->
+              </div>
+            </div>
+            <!-- 下方主体内容 -->
+          </div>
+          <!-- 5 -->
+          <div class="list-menu">
+            <!-- 一行的内容 -->
+            <div class="list-menu-head">
+              <div class="list-menu-label no-flex">
+                <!-- <slot name="label">{{ label }}</slot> -->
+                <svg class="mb-icon" aria-hidden="true">
+                  <use xlink:href="#iconzu4"></use>
+                </svg>
+              </div>
+              <div class="list-menu-main">
+                <!-- <slot name="main">{{ main }}</slot> -->
+                <h5>SUPPLIERS</h5>
+              </div>
+              <div class="list-menu-side no-flex">
+                <!-- <slot name="side">{{ side }}</slot> -->
+                <!-- <span class="catalog-mune-body"
+                  >Total <span class="mb-blue">3</span> Documents</span
+                > -->
+                <!-- <svg class="mb-icon right mb-icon-next" aria-hidden="true">
+                  <use xlink:href="#iconzu16"></use>
+                </svg> -->
+              </div>
+            </div>
+            <!-- 下方主体内容 -->
+          </div>
+          <!-- 6 -->
+          <div class="list-menu">
+            <!-- 一行的内容 -->
+            <div class="list-menu-head">
+              <div class="list-menu-label no-flex">
+                <!-- <slot name="label">{{ label }}</slot> -->
+                <svg class="mb-icon" aria-hidden="true">
+                  <use xlink:href="#iconzu3"></use>
+                </svg>
+              </div>
+              <div class="list-menu-main">
+                <!-- <slot name="main">{{ main }}</slot> -->
+                <h5>BRANDING</h5>
+              </div>
+              <div class="list-menu-side no-flex">
+                <!-- <slot name="side">{{ side }}</slot> -->
+                <span class="catalog-mune-body">Coming Soon</span>
+                <!-- <svg class="mb-icon right mb-icon-next" aria-hidden="true">
+                  <use xlink:href="#iconzu16"></use>
+                </svg> -->
+              </div>
+            </div>
+            <!-- 下方主体内容 -->
+          </div>
+          <!-- 7 -->
+          <div class="list-menu">
+            <!-- 一行的内容 -->
+            <div class="list-menu-head">
+              <div class="list-menu-label no-flex">
+                <!-- <slot name="label">{{ label }}</slot> -->
+                <svg class="mb-icon" aria-hidden="true">
+                  <use xlink:href="#iconzu"></use>
+                </svg>
+              </div>
+              <div class="list-menu-main">
+                <!-- <slot name="main">{{ main }}</slot> -->
+                <h5>HELP CENTER</h5>
+              </div>
+              <div class="list-menu-side no-flex">
+                <!-- <slot name="side">{{ side }}</slot> -->
+                <!-- <span class="catalog-mune-body"
+                  >Total <span class="mb-blue">3</span> Documents</span
+                > -->
+                <!-- <svg class="mb-icon right mb-icon-next" aria-hidden="true">
+                  <use xlink:href="#iconzu16"></use>
+                </svg> -->
+              </div>
+            </div>
+            <!-- 下方主体内容 -->
+          </div>
         </div>
-        <div class="index-main-about-content bgWhite">
-          <h3 class="index-blue">The World's Leading Chemical E-commerce Platform</h3>
-          <p class="index-margin-top">MOLBASE, found in Shanghai in 2013, is a leading data-driven integrated platform in chemical e-commerce industry. It is the largest chemical e-commerce platform in China in terms of GMV in 2017 and 2018, according to Frost & Sullivan.</p>
-          <p class="index-blue index-margin-top">Learn More ></p>
+        <div class="mb-navigate-footer bgWhite mb-blue">
+          —  CONTACT US  —
         </div>
+        <!-- <div class="bodymovinanim"></div> -->
       </div>
-      <div class="index-footer">
-        <div class="index-class">
-          <ul class="mb-list-class bgWhite">
-            <li>
-              <svg class="mb-icon" aria-hidden="true">
-                <use xlink:href="#iconzu9"></use>
-              </svg>
-              <span>Furoic acid</span>
-              <svg class="mb-icon mb-icon-small right mb-icon-next" aria-hidden="true">
-                <use xlink:href="#iconzu15"></use>
-              </svg>
-            </li>
-            <li>
-              <svg class="mb-icon" aria-hidden="true">
-                <use xlink:href="#iconzu9"></use>
-              </svg>
-              <span>Furoic acid</span>
-              <svg class="mb-icon mb-icon-small right mb-icon-next" aria-hidden="true">
-                <use xlink:href="#iconzu15"></use>
-              </svg>
-            </li>
-            <li>
-              <svg class="mb-icon" aria-hidden="true">
-                <use xlink:href="#iconzu9"></use>
-              </svg>
-              <span>Furoic acid</span>
-              <svg class="mb-icon mb-icon-small right mb-icon-next" aria-hidden="true">
-                <use xlink:href="#iconzu15"></use>
-              </svg>
-            </li>
-          </ul>
+      <!-- 弹框 -->
+      <div class="popbox index-pop" style="display: none;">
+        <div class="mask"></div>
+        <div class="popbox-body">
+          <div>
+            <div class="popbox-header">
+              <!-- <h3 class="popbox-title">111</h3> -->
+            </div>
+            <div class="popbox-content">
+              <div class="popbox-align">This website uses cookies for range analysis and to provide our functions. By using our website you consent to all cookies in accordance with our Cookie Policy. You can make use of your right of objection by deactivating non-mandatory cookies in our <a class="mb-blue">privacy policy</a>.</div>
+            </div>
+            <div class="popbox-foot">
+              <!-- <a class="primary">OK</a> -->
+              <button class="font14">OK</button>
+            </div>
+          </div>
+          <!-- <span class="close">x</span> -->
         </div>
-        <p>Copyright © 2015 MOLBASE All Rights Reserved.</p>
-        <p>ICP Shanghai 14014220</p>
       </div>
     </div>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
     <!-- <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
   </body>

@@ -11,5 +11,6 @@ function getAbsolutePath (addr) {
 module.exports = {
   'src': path.resolve(__dirname, '../src'),
 
-  'Api': getAbsolutePath('services/api.js')
+  'Api': getAbsolutePath('services/api.js'),
+  'localStorage': getAbsolutePath('services/localStorage.js')
 }

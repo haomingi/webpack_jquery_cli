@@ -1,0 +1,27 @@
+@charset "UTF-8";
+@import "variable/global_mixins";
+
+div {
+  // @include font-dpr(16px);
+}
+
+// 设置不同分辨率的图片
+.btn-android {
+  // background-image: url("../img/@2x/android.png?v=@@version");
+  // [data-dpr="3"] & {
+  //   background-image: url("../img/@3x/android.png?v=@@version");
+  // }
+}
+.text-ft-dpf {
+  @include font-dpr(14);
+}
+
+.text-bg-dpf {
+  @include background-dpr('Rectangle.png');
+  background-size: 100% 100%;
+  width: 9.2rem;
+  height: 3.2rem;
+}
+.text-font {
+  font-size: .37rem;
+}

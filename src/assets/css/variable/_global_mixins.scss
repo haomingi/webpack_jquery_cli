@@ -1,8 +1,32 @@
+// 通用内容设置
+
 @charset "UTF-8";
 @import "../variable/global";
 
+$version: "1.0.1";
+
 @mixin font-size($size) {
-  font-size: ($size / 100) + rem;
+  font-size: $size + px;
+}
+
+// 适配的 字体
+@mixin font-dpr($font-size) {
+  font-size: $font-size + px;
+  [data-dpr="2"] & {
+    font-size: $font-size * 2 + px;
+  }
+  [data-dpr="3"] & {
+    font-size: $font-size * 3 + px;
+  }
+}
+
+// 适配的 背景 传入参数：android.png 默认是在images下面
+// 路径默认从css下 不是在variable下面！！！
+@mixin background-dpr($url, $path: '../images/') {
+  background-image: url($path + "@2x/" + $url + "?v=" + $version);
+  [data-dpr="3"] & {
+    background-image: url($path + "@3x/" +  $url + "?v=" + $version);
+  }
 }
 
 // 一行文本多则截取掉
@@ -175,7 +199,6 @@ $value;
   &:after {
     content: " ";
     display: block;
-    ;
     line-height: 0;
     height: 0;
     visibility: hidden;
@@ -289,6 +312,7 @@ $value;
   @include font-size(14);
 }
 
+// !
 %font-size-15 {
   @include font-size(15);
 }

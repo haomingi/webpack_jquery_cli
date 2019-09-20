@@ -1,10 +1,12 @@
+// html标签设置
+
 @charset "UTF-8";
 @import "variable/global";
 @import "variable/global_mixins";
 @import "variable/molbase";
 
 html {
-  font-size: 625%;
+  // font-size: 625%;
   /*100 ÷ 16 × 100% = 625%*/
   /* 禁用iPhone中Safari的字号自动调整 */
   -ms-text-size-adjust: 100%;
@@ -13,48 +15,48 @@ html {
 }
 
 // 适配不同像素
-@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
-  html {
-    font-size: 703%;
-  }
-}
+// @media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+//   html {
+//     font-size: 703%;
+//   }
+// }
 
-@media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait) {
-  html {
-    font-size: 732.4%;
-  }
-}
+// @media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait) {
+//   html {
+//     font-size: 732.4%;
+//   }
+// }
 
-@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
-  html {
-    font-size: 750%;
-  }
-}
+// @media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+//   html {
+//     font-size: 750%;
+//   }
+// }
 
-@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
-  html {
-    font-size: 781.25%;
-  }
-}
+// @media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+//   html {
+//     font-size: 781.25%;
+//   }
+// }
 
-@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait) {
-  html {
-    font-size: 808.6%;
-  }
-}
+// @media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait) {
+//   html {
+//     font-size: 808.6%;
+//   }
+// }
 
-@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait) {
-  html {
-    font-size: 843.75%;
-  }
-}
+// @media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait) {
+//   html {
+//     font-size: 843.75%;
+//   }
+// }
 
-h1 { font-size: 0.24rem;}
-h2 { font-size: 0.18rem;}
-h3 { font-size: 0.14rem;}
-h4 { font-size: 0.12rem;}
-h5 { font-size: 0.1rem;}
-h6 { font-size: 0.08rem;}
+// h1 { font-size: 0.24rem;}
+// h2 { font-size: 0.18rem;}
+// h3 { font-size: 0.14rem;}
+// h4 { font-size: 0.12rem;}
+// h5 { font-size: 0.1rem;}
+// h6 { font-size: 0.08rem;}
 
 /* 去除iPhone中默认的input样式 */
 input[type="submit"],
@@ -77,6 +79,7 @@ body {
   margin: 0;
   padding: 0;
   outline: none;
+  box-sizing:border-box;
 }
 
 a,
@@ -188,19 +191,19 @@ fieldset {
 @include box-value-site(40);
 
 .padding-10 {
-  padding: .1rem;
+  padding: .13rem;
 }
 
 .padding-15 {
-  padding: .15rem;
-}
-
-.padding-20 {
   padding: .2rem;
 }
 
+.padding-20 {
+  padding: .27rem;
+}
+
 .margin-10 {
-  margin: .1rem;
+  margin: .13rem;
 }
 
 .border-top {
@@ -469,7 +472,7 @@ fieldset {
 }
 
 .fromApp .appMask-inner {
-  margin-top: -0.48rem;
+  margin-top: .13rem;
 }
 
 // ios11初始化iscroll会加入translateZ(0px)

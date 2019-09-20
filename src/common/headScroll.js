@@ -3,15 +3,19 @@
  * @Author: haoming
  * @Date: 2019-07-15 17:13:56
  * @LastEditors: haoming
- * @LastEditTime: 2019-07-16 11:17:45
+ * @LastEditTime: 2019-09-20 09:49:21
  */
 
 const $ = window.jQuery
 
 function headScroll () {
   let $search = $('.mb-main-search')
-  let $headerSearch = $('.mb-header>.search')
+  let $headerSearch = $('.mb-header .search')
   let $mainSearch = $('.mb-main-search')
+  window.moveBy.scroBol = true
+  window.moveBy.headScroll = true
+  // 默认隐藏
+  $('.mb-header .search').parent().addClass('dn')
 
   // 页面滚动。三种情况：慢慢滑动、快速滑动、惯性滑动
   // 离上方header距离。自身高度+margin-top
@@ -26,6 +30,7 @@ function headScroll () {
     return !!(($search.height() / 2) <= $(document).scrollTop() && $(document).scrollTop() <= ($searchTop + $search.height() / 2))
   }
   $(window).on('touchmove', function (e) {
+    if (!window.moveBy.scroBol) return
     // 离顶部距离
     scrollTop = $(document).scrollTop()
     // 当前滑动的距离，小于$searchTop，这个时候搜索框还是可见的
@@ -40,6 +45,8 @@ function headScroll () {
       // console.log((scrollTop - $search.height() / 2) / $searchTop)
       // $search.height() / 2-->指的是搜索的上边距，这个距离滑动过去之后，在搜索框被遮挡的时候，才开始出现此效果
       // console.log('111111111111')
+      // 默认隐藏
+      $('.mb-header .search').parent().removeClass('dn')
       if (opacity > 0.9) {
         $headerSearch.css('opacity', 1)
         $mainSearch.css('opacity', 0)
@@ -53,6 +60,8 @@ function headScroll () {
         // 此时直接去除这个控制
         $headerSearch.removeAttr('style')
         $mainSearch.removeAttr('style')
+        // 默认隐藏
+        $('.mb-header .search').parent().addClass('dn')
       } else {
         $headerSearch.css('opacity', opacity)
         $mainSearch.css('opacity', 1 - opacity)
@@ -140,8 +149,10 @@ function headScroll () {
               scrollBol = false
               $headerSearch.removeAttr('style')
               $mainSearch.removeAttr('style')
+              // 默认隐藏
+              $('.mb-header .search').parent().addClass('dn')
             }
-          }, 60)
+          }, 30)
         } else {
           // 屏幕向下
           // console.log('屏幕向下')
@@ -165,12 +176,14 @@ function headScroll () {
               $headerSearch.css('opacity', 1)
               $mainSearch.css('opacity', 0)
             }
-          }, 60)
+          }, 30)
         }
       } else if ($(document).scrollTop() <= ($search.height() / 2)) {
         // 重置，看到搜索框
         $headerSearch.removeAttr('style')
         $mainSearch.removeAttr('style')
+        // 默认隐藏
+        $('.mb-header .search').parent().addClass('dn')
       } else if (($searchTop + $search.height() / 2) <= $(document).scrollTop()) {
         // 重置，看不到搜索框
         $headerSearch.css('opacity', 1)
@@ -186,6 +199,8 @@ function headScroll () {
       } else if (num < 0) {
         $headerSearch.removeAttr('style')
         $mainSearch.removeAttr('style')
+        // 默认隐藏
+        $('.mb-header .search').parent().addClass('dn')
       } else {
         $headerSearch.css('opacity', num)
         $mainSearch.css('opacity', 1 - num)
@@ -198,6 +213,8 @@ function headScroll () {
       //向上惯性滑动，距离短不用处理。此处处理向下惯性滑动，看不到搜索框，并且搜索图片还没全部出现
       $headerSearch.removeAttr('style')
       $mainSearch.removeAttr('style')
+      // 默认隐藏
+      $('.mb-header .search').parent().addClass('dn')
     }
     // 每次结束都从新赋值，本次与上次一样，证明惯性没处发或者惯性停止
     lastScreenY = $(document).scrollTop()
